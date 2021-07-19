@@ -1,11 +1,11 @@
 <template>
     <div class="row">
-        <Card class="col-2" v-for="film in results" :key="film.id"
-        :Image="film.image"
+        <Card class="col-3" v-for="film in movie" :key="film.id"
+        :poster_path="film.poster_path"
         :title="film.title"
         :original_title="film.original_title"
         :original_language="film.original_language"
-        :vote_average="film.vote_avarage"
+        :vote_average="film.vote_average"
     />
     </div>
 </template>
@@ -16,7 +16,7 @@ import Card from "./Card.vue";
 export default {
   name: "Main",
   props: {
-    results: Array
+    movie: Array,
   },
   components: {
     Card
