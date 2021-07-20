@@ -17,6 +17,7 @@ export default {
   name: "Main",
   props: {
     movie: Array,
+    search2: Array,
   },
   components: {
     Card

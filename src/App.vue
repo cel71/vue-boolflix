@@ -27,7 +27,7 @@ export default {
     }
   },
   created () {
-    axios.get("https://api.themoviedb.org/3/movie/popular?api_key=8cf49e8225a818c8b6106111d6e5001f").then ((results) => {
+    axios.get("https://api.themoviedb.org/3/movie/popular?api_key=8cf49e8225a818c8b6106111d6e5001f&language=it=IT&page=1").then ((results) => {
       this.movie = results.data.results;
       this.search2 = results.data.results;
     })
@@ -41,15 +41,19 @@ export default {
       axios.get(`https://api.themoviedb.org/3/search/multi?api_key=8cf49e8225a818c8b6106111d6e5001f&query=${searchFilm}`).then ((results) => {
         this.search2 = results.data.results;
       })
-    }
+    },
   },
-
 };
 </script>
 
 <style lang="scss" scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
 #app {
   background-color: rgb(21, 21, 21);
+  padding-bottom: 40px;
+  font-family: 'Ubuntu', sans-serif;
   
   .container {
     margin: 0 auto;

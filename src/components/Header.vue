@@ -27,8 +27,6 @@
 
 <script>
 
-
-
 export default {
   name: "Header",
   components: {
@@ -89,6 +87,7 @@ export default {
             align-items: center;
             justify-content: center;
             padding-right: 15px;
+            padding-bottom: 12px;
 
             form {
                 width: 250px;
@@ -96,6 +95,7 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin-right: 10px;
 
                 input {
                     margin-right: 15px;
