@@ -13,13 +13,13 @@
         </div>
         <div class="nav-box-inner2">
             <form action="">
-                <input type="text" placeholder="Search" v-model="searchFilm">
+                <input type="text" placeholder=" Search" v-model="searchFilm">
                 <i class="fas fa-search" @click="$emit('search', searchFilm)"></i>
             </form>
             <button @click="$emit('search', searchFilm)">CERCA</button>
             <div class="categoria">BAMBINI</div>
             <i class="fas fa-bell"></i>
-            <i class="far fa-smile"></i>
+            <img class="avatar" src="../assets/Netflix-avatar.png" alt="Netflix-avatar">
             <i class="fas fa-sort-down"></i>
         </div>
     </nav>
@@ -99,6 +99,14 @@ export default {
 
                 input {
                     margin-right: 15px;
+                    border-radius: 6px;
+                    border: 1px solid white;
+                    background-color: rgb(149, 149, 149);
+                    padding: 5px;
+                }
+
+                input::-webkit-input-placeholder {
+                    color: white;
                 }
 
                 i {
@@ -115,11 +123,18 @@ export default {
                 font-weight: bold;
                 border-radius: 5px;
                 margin-right: 15px;
+                padding: 2px 12px;
             }
 
             .categoria {
                 color: white;
                 font-size: 15px;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+
+            .avatar {
+                width: 40px;
                 margin-right: 15px;
                 cursor: pointer;
             }

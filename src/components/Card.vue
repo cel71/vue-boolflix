@@ -2,7 +2,7 @@
     <div class="box-immagini">
         <div class="box-immagini-inner">
             <div class="immagini">
-                <img :src="'https://image.tmdb.org/t/p/w500/' + poster_path" :alt="`${title}`"/>
+                <img :src="images (poster_path)" :alt="`${title}`"/>
                 <div class="dati">
                     <div class="title">{{title.toUpperCase()}}</div>
                     <div class="original-title">ORIGINAL TITLE: {{original_title}}</div>
@@ -39,7 +39,10 @@ export default {
   methods : {
     bandiere (originalLanguage) {
         return require ("../assets/" + originalLanguage + ".svg");
-    }
+    },
+    images (imagesFilms) {
+        return `https://image.tmdb.org/t/p/w500/${imagesFilms}`;
+    },
   },
 };
 </script>
