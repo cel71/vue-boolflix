@@ -13,7 +13,7 @@
         </div>
         <div class="nav-box-inner2">
             <form action="">
-                <input type="text" placeholder=" Search" v-model="searchFilm">
+                <input type="text" placeholder=" Search" v-model="searchFilm" @keyup="$emit('search', searchFilm)">
                 <i class="fas fa-search" @click="$emit('search', searchFilm)"></i>
             </form>
             <button @click="$emit('search', searchFilm)">CERCA</button>

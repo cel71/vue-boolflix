@@ -1,11 +1,11 @@
 <template>
     <div class="box-immagini">
         <div class="box-immagini-inner">
-            <div class="immagini">
+            <div class="immagini" v-if="(poster_path !== null)">
                 <img :src="images (poster_path)" :alt="`${title}`"/>
                 <div class="dati">
                     <div class="title">{{title.toUpperCase()}}</div>
-                    <div class="original-title">ORIGINAL TITLE: {{original_title}}</div>
+                    <div v-if="title !== original_title" class="original-title">ORIGINAL TITLE: {{original_title}}</div>
                     <div class="bandiera">
                         <div class="original_language">LANGUAGE: {{original_language}}</div>
                         <img :src="bandiere(original_language)" alt="bandiere"/>
