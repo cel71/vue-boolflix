@@ -1,6 +1,6 @@
 <template>
       <div class="row">
-        <h5>Film Popolari:</h5>
+        <h5>Film popolari:</h5>
         <Card class="col-3" v-for="film in movie" :key="film.id"
         :poster_path="film.poster_path"
         :title="film.title"
